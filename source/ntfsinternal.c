@@ -63,9 +63,13 @@ const INTERFACE_ID ntfs_disc_interfaces[] = {
 #endif
 
 #ifdef LIBXENON
-extern DISC_INTERFACE usb2mass_ops;
+extern DISC_INTERFACE usb2mass_ops_0;
+extern DISC_INTERFACE usb2mass_ops_1;
+extern DISC_INTERFACE usb2mass_ops_2;
 const INTERFACE_ID ntfs_disc_interfaces[] = {
-    { "uda", &usb2mass_ops },
+    { "uda", &usb2mass_ops_0 },
+	{ "udb", &usb2mass_ops_1 },
+	{ "udc", &usb2mass_ops_2 },
     { "sda", NULL },
     { NULL, NULL }
 };
